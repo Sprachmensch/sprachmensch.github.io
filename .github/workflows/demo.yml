@@ -14,8 +14,14 @@ jobs:
         run: python -m pip install --upgrade pip setuptools wheel
       - name: Run awesome script :)
         run: python script.py
+      - name: Commit files # commit the output folder
+        run: |
+          git config --local user.email "test@github.com"
+          git config --local user.name "GitHub Action test"
+          git commit -m "Add changes"
       - name: Push changes                               
         uses: ad-m/github-push-action@master
         with:                                 
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
 
