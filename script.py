@@ -12,7 +12,7 @@ footer = '</body>'
 
 file = open("index.html", "w")
 file.write(header)
-file.write(markdown2.markdown_path("index.md"))
+file.write(markdown2.markdown_path("src/index.md"))
 file.write(footer)
 file.close()
 print("Done!")
