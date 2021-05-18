@@ -15,3 +15,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "OMG its working!"
+      - run: touch readme.txt
+      - run: ls ${{ github.workspace }}
