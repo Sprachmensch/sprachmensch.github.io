@@ -12,6 +12,8 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: python -m pip install --upgrade pip setuptools wheel
+      - name: Install markdown2
+        run: pip install markdown2
       - name: Run awesome script :)
         run: python script.py
       - name: Commit files # commit the output folder
