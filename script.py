@@ -1,0 +1,6 @@
+file=open("index.html","r+")
+tmp= file.read()
+myData=tmp.replace("</body>","<p>Oh a new Line, added via GitHub actions</p></body>")
+file.write(myData)
+file.close()
+print("Done!")
