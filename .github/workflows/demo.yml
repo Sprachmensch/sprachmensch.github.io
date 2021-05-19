@@ -16,6 +16,8 @@ jobs:
         run: pip install markdown2
       - name: Install Datetime
         run: pip install datetime
+      - name: Get my Reqs
+        run: pip freeze > requirements. txt
       - name: Run awesome script :)
         run: python script.py
       - name: Commit files # commit the output folder
