@@ -20,7 +20,8 @@ jobs:
         run: |
           git config --local user.email "test@github.com"
           git config --local user.name "GitHub Action test"
-          git add index.html
+          # git add index.html
+          git add -A
           git commit -m "Add changes"
       - name: Push changes                               
         uses: ad-m/github-push-action@master
