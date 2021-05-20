@@ -31,3 +31,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
 
+  Explore-GitHub-Actions-2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🐧 This is the second job!"
+
