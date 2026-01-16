@@ -1,0 +1,272 @@
+<style>
+  :root {
+    --width: 830px;
+    --font-main: 'Georgia', serif;
+    --font-secondary: 'Georgia', serif;
+    /* --font-secondary: Verdana, sans-serif; */
+    --font-size: 16px;
+    --background-color: #fff;
+    --heading-color: #474747;
+    --text-color: #474747;
+    --link-color: #1b1b1b;
+    --visited-color: #111111;
+    --blockquote-color: #474747;
+    --brand: #d2fccf;
+    --brand-alt: #75cb6f;
+    --font-family: "Iowan","Iowan Old Style","Iowan BT",'Palatino Linotype', 'URW Palladio L', P052, serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: "Iowan","Iowan Old Style","Iowan BT",'Palatino Linotype', 'URW Palladio L', P052, serif;
+    font-size: var(--font-scale);
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 0em;
+    color: var(--text-color);
+    font: 400 1rem/1.85 var(--font-family);
+  }
+
+  body.home-width {
+      max-width: 430px;
+
+  }
+
+  h2 {
+    font-size: 32px;
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  /* a {
+    /* color: var(--link-color);
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit; 
+    vertical-align: baseline; 
+    color: var(--text-color);
+    text-decoration: underline;
+    background-image          : linear-gradient(to right, var(--brand) , var(--brand-alt));
+    background-repeat         : no-repeat;
+    transition-property       : background-size;
+    background-position       : 0% 150%;
+    background-size           : 200% 40%;
+    text-decoration-skip-ink  : none;
+    text-decoration-thickness : .5em;
+    text-underline-offset     : -.25em;
+    text-decoration-color     : var(--brand);
+    transition-property       : background-position;
+    &:hover {
+        background-position : 100% 100%;
+    }
+}
+ a:hover {
+    text-decoration: underline;
+  } */
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    background-image: linear-gradient(#a1b577, #94bd3a);
+    background-size: 50% 1px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+  }
+
+  a:hover{
+    background-size: 100% 1px;
+    transition: background-size 0.5s ease;
+  }
+
+
+  a h1{
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-weight: normal;
+
+  }
+ 
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 10px 20px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    overflow-x: auto;
+  }
+
+  code {
+    border: 2px dashed #ccc;
+    font-family: Verdana, sans-serif;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+    color: #808080;
+    font-size: 80%;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight
+	  {
+  }
+  .code {
+    border-radius: 3px;
+    overflow-x: auto;
+  }
+
+  /* blog post list */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul {
+    padding-left: 0px;
+  }
+  ul,ol {
+    list-style: none;
+  }
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+/* Der Container muss "relative" sein, damit der Button sich daran orientiert */
+.highlight {
+  position: relative;
+}
+
+/* Der Button selbst */
+.copy-code-button {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  color: #242020;
+  background-color: rgba(193,225,193,0.5); /* Halb-transparent */
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 1; /* Standardmäßig unsichtbar */
+  transition: opacity 0.3s;
+  font-family: sans-serif;
+  z-index: 10;
+}
+  .title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between text and image */
+}
+
+.title-image {
+  height: 32px; /* adjust as needed */
+  width: auto;
+}
+
+
+/* Button zeigen, wenn man mit der Maus über den Code fährt */
+.highlight:hover .copy-code-button {
+  background-color: rgba(193,225,193,1); /* Halb-transparent */
+}
+
+/* Optional: Button beim Klicken visuell verändern */
+.copy-code-button:active {
+  background-color: #333;
+
+}
+
+
+</style>

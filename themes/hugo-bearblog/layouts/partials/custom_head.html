@@ -1,0 +1,39 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Alle Code-Blöcke finden
+    const codeBlocks = document.querySelectorAll('.highlight');
+
+    codeBlocks.forEach((block) => {
+      // 2. Button erstellen
+      const button = document.createElement('button');
+      button.className = 'copy-code-button';
+      button.innerText = 'Copy';
+
+      // 3. Button zum Code-Block hinzufügen
+      block.appendChild(button);
+
+      // 4. Klick-Event hinzufügen
+      button.addEventListener('click', () => {
+        // Den eigentlichen Code-Text holen (ohne HTML-Tags)
+        // Wir suchen das 'code' element innerhalb des blocks
+        const codeText = block.querySelector('code').innerText;
+
+        // In die Zwischenablage schreiben
+        navigator.clipboard.writeText(codeText).then(() => {
+          // Feedback geben
+          button.innerText = 'Copied!';
+          
+          // Nach 2 Sekunden wieder zurücksetzen
+          setTimeout(() => {
+            button.innerText = 'Copy';
+          }, 2000);
+        }).catch(err => {
+          console.error('Fehler beim Kopieren: ', err);
+          button.innerText = 'Error';
+        });
+      });
+    });
+  });
+</script><!-- A partial to be overwritten by the user.
+  Simply place a custom_head.html into
+  your local /layouts/partials-directory -->

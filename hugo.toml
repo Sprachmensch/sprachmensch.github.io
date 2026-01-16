@@ -1,0 +1,19 @@
+baseURL = 'https://www.shelltopy.com/'
+languageCode = 'en-us'
+title = 'Shell to Py - Python for Sys Admins'
+theme = 'hugo-bearblog'
+
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
+
+[params]
+  hideMadeWithLine = true
+
+[markup]
+  [markup.highlight]
+    style = 'monokailight'
+    lineNos = false
+    lineNumbersInTable = false
+    codeFences = true
+    noClasses = true
