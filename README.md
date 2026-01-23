@@ -2,5 +2,4 @@
 
 [click here](http://sprachmensch.github.io)
 
-test for tiny pyssg
-test
+test via hugo
