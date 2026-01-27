@@ -1,27 +1,391 @@
-<!doctype html><html lang=en-us><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>File handling | Shell to Py - Python for Sys Admins</title><meta name=title content="File handling"><meta name=description content='Read a file (Textfile):
-with open("filename") as file:
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>File handling | Shell to Py - Python for Sys Admins</title>
+<meta name="title" content="File handling" />
+<meta name="description" content="Read a file (Textfile):
+with open(&#34;filename&#34;) as file:
         print(file.read())
 Write a file:
-with open("filename","w") as file:
-        file.write("Test")
+with open(&#34;filename&#34;,&#34;w&#34;) as file:
+        file.write(&#34;Test&#34;)
 Basics out of the way.
 TODO
-append/replace/&mldr;
+append/replace/&hellip;
 seek
-binary'><meta name=keywords content><meta property="og:url" content="https://www.shelltopy.com/file-handling/"><meta property="og:site_name" content="Shell to Py - Python for Sys Admins"><meta property="og:title" content="File handling"><meta property="og:description" content='Read a file (Textfile):
-with open("filename") as file: print(file.read()) Write a file:
-with open("filename","w") as file: file.write("Test") Basics out of the way.
-TODO append/replace/… seek binary'><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2026-01-13T16:18:07+01:00"><meta property="article:modified_time" content="2026-01-13T16:18:07+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="File handling"><meta name=twitter:description content='Read a file (Textfile):
-with open("filename") as file: print(file.read()) Write a file:
-with open("filename","w") as file: file.write("Test") Basics out of the way.
-TODO append/replace/… seek binary'><meta itemprop=name content="File handling"><meta itemprop=description content='Read a file (Textfile):
-with open("filename") as file: print(file.read()) Write a file:
-with open("filename","w") as file: file.write("Test") Basics out of the way.
-TODO append/replace/… seek binary'><meta itemprop=datePublished content="2026-01-13T16:18:07+01:00"><meta itemprop=dateModified content="2026-01-13T16:18:07+01:00"><meta itemprop=wordCount content="26"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:830px;--font-main:'Georgia', serif;--font-secondary:'Georgia', serif;--font-size:16px;--background-color:#fff;--heading-color:#474747;--text-color:#474747;--link-color:#1b1b1b;--visited-color:#111111;--blockquote-color:#474747;--brand:#d2fccf;--brand-alt:#75cb6f;--font-family:"Iowan","Iowan Old Style","Iowan BT",'Palatino Linotype', 'URW Palladio L', P052, serif}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:iowan,iowan old style,iowan bt,palatino linotype,urw palladio l,P052,serif;font-size:var(--font-scale);margin:auto;margin-top:30px;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:0;color:var(--text-color);font:1rem/1.85 var(--font-family)}body.home-width{max-width:430px}h2{font-size:32px;font-family:var(--font-main);color:var(--heading-color)}h1,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--text-color);text-decoration:none;background-image:linear-gradient(#a1b577,#94bd3a);background-size:50% 1px;background-position:0 100%;background-repeat:no-repeat}a:hover{background-size:100% 1px;transition:background-size .5s ease}a h1{margin-bottom:30px;text-decoration:none;font-weight:400}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:20px}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}pre code{color:#222;display:block;padding:10px 20px;white-space:pre-wrap;font-size:16px;overflow-x:auto}code{border:2px dashed #ccc;font-family:Verdana,sans-serif}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center;color:gray;font-size:80%}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight{}.code{border-radius:3px;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul{padding-left:0}ul,ol{list-style:none}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}.highlight{position:relative}.copy-code-button{position:absolute;top:-10px;right:5px;color:#242020;background-color:rgba(193,225,193,.5);border:none;border-radius:4px;padding:4px 8px;font-size:12px;cursor:pointer;opacity:1;transition:opacity .3s;font-family:sans-serif;z-index:10}.title-container{display:flex;align-items:center;gap:10px}.title-image{height:32px;width:auto}.highlight:hover .copy-code-button{background-color:#c1e1c1}.copy-code-button:active{background-color:#333}</style><script>document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".highlight");e.forEach(e=>{const t=document.createElement("button");t.className="copy-code-button",t.innerText="Copy",e.appendChild(t),t.addEventListener("click",()=>{const n=e.querySelector("code").innerText;navigator.clipboard.writeText(n).then(()=>{t.innerText="Copied!",setTimeout(()=>{t.innerText="Copy"},2e3)}).catch(e=>{console.error("Fehler beim Kopieren: ",e),t.innerText="Error"})})})})</script></head><body><header><a href=/ class=title><h1>Shell to Py - Python for Sys Admins / File handling</h1></a></header><main><p></p><content><p>Read a file (Textfile):</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00a8c8>with</span> <span style=color:#111>open</span><span style=color:#111>(</span><span style=color:#d88200>&#34;filename&#34;</span><span style=color:#111>)</span> <span style=color:#00a8c8>as</span> <span style=color:#111>file</span><span style=color:#111>:</span>
-</span></span><span style=display:flex><span>        <span style=color:#111>print</span><span style=color:#111>(</span><span style=color:#111>file</span><span style=color:#f92672>.</span><span style=color:#111>read</span><span style=color:#111>())</span>
-</span></span></code></pre></div><p>Write a file:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00a8c8>with</span> <span style=color:#111>open</span><span style=color:#111>(</span><span style=color:#d88200>&#34;filename&#34;</span><span style=color:#111>,</span><span style=color:#d88200>&#34;w&#34;</span><span style=color:#111>)</span> <span style=color:#00a8c8>as</span> <span style=color:#111>file</span><span style=color:#111>:</span>
-</span></span><span style=display:flex><span>        <span style=color:#111>file</span><span style=color:#f92672>.</span><span style=color:#111>write</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Test&#34;</span><span style=color:#111>)</span>
-</span></span></code></pre></div><p>Basics out of the way.</p><p>TODO
-append/replace/&mldr;
+binary" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/file-handling/">
+  <meta property="og:site_name" content="Shell to Py - Python for Sys Admins">
+  <meta property="og:title" content="File handling">
+  <meta property="og:description" content="Read a file (Textfile):
+with open(&#34;filename&#34;) as file: print(file.read()) Write a file:
+with open(&#34;filename&#34;,&#34;w&#34;) as file: file.write(&#34;Test&#34;) Basics out of the way.
+TODO append/replace/… seek binary">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-01-13T16:18:07+01:00">
+    <meta property="article:modified_time" content="2026-01-13T16:18:07+01:00">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="File handling">
+  <meta name="twitter:description" content="Read a file (Textfile):
+with open(&#34;filename&#34;) as file: print(file.read()) Write a file:
+with open(&#34;filename&#34;,&#34;w&#34;) as file: file.write(&#34;Test&#34;) Basics out of the way.
+TODO append/replace/… seek binary">
+
+
+
+
+  <meta itemprop="name" content="File handling">
+  <meta itemprop="description" content="Read a file (Textfile):
+with open(&#34;filename&#34;) as file: print(file.read()) Write a file:
+with open(&#34;filename&#34;,&#34;w&#34;) as file: file.write(&#34;Test&#34;) Basics out of the way.
+TODO append/replace/… seek binary">
+  <meta itemprop="datePublished" content="2026-01-13T16:18:07+01:00">
+  <meta itemprop="dateModified" content="2026-01-13T16:18:07+01:00">
+  <meta itemprop="wordCount" content="26">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 830px;
+    --font-main: 'Georgia', serif;
+    --font-secondary: 'Georgia', serif;
+     
+    --font-size: 16px;
+    --background-color: #fff;
+    --heading-color: #474747;
+    --text-color: #474747;
+    --link-color: #1b1b1b;
+    --visited-color: #111111;
+    --blockquote-color: #474747;
+    --brand: #d2fccf;
+    --brand-alt: #75cb6f;
+    --font-family: "Iowan","Iowan Old Style","Iowan BT",'Palatino Linotype', 'URW Palladio L', P052, serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: "Iowan","Iowan Old Style","Iowan BT",'Palatino Linotype', 'URW Palladio L', P052, serif;
+    font-size: var(--font-scale);
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 0em;
+    color: var(--text-color);
+    font: 400 1rem/1.85 var(--font-family);
+  }
+
+  body.home-width {
+      max-width: 430px;
+
+  }
+
+  h2 {
+    font-size: 32px;
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+   
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    background-image: linear-gradient(#a1b577, #94bd3a);
+    background-size: 50% 1px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+  }
+
+  a:hover{
+    background-size: 100% 1px;
+    transition: background-size 0.5s ease;
+  }
+
+
+  a h1{
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-weight: normal;
+
+  }
+ 
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 10px 20px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    overflow-x: auto;
+  }
+
+  code {
+    border: 2px dashed #ccc;
+    font-family: Verdana, sans-serif;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+    color: #808080;
+    font-size: 80%;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight
+	  {
+  }
+  .code {
+    border-radius: 3px;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul {
+    padding-left: 0px;
+  }
+  ul,ol {
+    list-style: none;
+  }
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+ 
+.highlight {
+  position: relative;
+}
+
+ 
+.copy-code-button {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  color: #242020;
+  background-color: rgba(193,225,193,0.5);  
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 1;  
+  transition: opacity 0.3s;
+  font-family: sans-serif;
+  z-index: 10;
+}
+  .title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+}
+
+.title-image {
+  height: 32px;  
+  width: auto;
+}
+
+
+ 
+.highlight:hover .copy-code-button {
+  background-color: rgba(193,225,193,1);  
+}
+
+ 
+.copy-code-button:active {
+  background-color: #333;
+
+}
+
+
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    const codeBlocks = document.querySelectorAll('.highlight');
+
+    codeBlocks.forEach((block) => {
+      
+      const button = document.createElement('button');
+      button.className = 'copy-code-button';
+      button.innerText = 'Copy';
+
+      
+      block.appendChild(button);
+
+      
+      button.addEventListener('click', () => {
+        
+        
+        const codeText = block.querySelector('code').innerText;
+
+        
+        navigator.clipboard.writeText(codeText).then(() => {
+          
+          button.innerText = 'Copied!';
+          
+          
+          setTimeout(() => {
+            button.innerText = 'Copy';
+          }, 2000);
+        }).catch(err => {
+          console.error('Fehler beim Kopieren: ', err);
+          button.innerText = 'Error';
+        });
+      });
+    });
+  });
+</script>
+</head>
+
+<body class=''>
+  <header><a href="/" class="title">
+	<h1>
+		
+		Shell to Py - Python for Sys Admins / File handling		
+		
+  </h1>
+</a>
+
+
+</header>
+  <main>
+    
+
+
+<p>
+</p>
+
+<content>
+  <p>Read a file (Textfile):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">with</span> <span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#34;filename&#34;</span><span style="color:#111">)</span> <span style="color:#00a8c8">as</span> <span style="color:#111">file</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">file</span><span style="color:#f92672">.</span><span style="color:#111">read</span><span style="color:#111">())</span>
+</span></span></code></pre></div><p>Write a file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">with</span> <span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#34;filename&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;w&#34;</span><span style="color:#111">)</span> <span style="color:#00a8c8">as</span> <span style="color:#111">file</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">file</span><span style="color:#f92672">.</span><span style="color:#111">write</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Test&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Basics out of the way.</p>
+<p>TODO
+append/replace/&hellip;
 seek
-binary</p></content><p></p></main><footer>2026 | made by <a href=https://github.com/sprachmensch/>me </a>| license<br><img src=/logo.png style=margin-top:30px;max-width:60px;height:auto></footer></body></html>
+binary</p>
+
+</content>
+
+
+
+<p>
+  
+</p>
+
+  </main>
+  <footer>
+2026 | made by <a href="https://github.com/sprachmensch/"> me </a> | license <br>
+<img src="/logo.png" style="margin-top: 30px; max-width:  60px; height: auto;">
+</footer>
+
+  
+</body>
+
+</html>
