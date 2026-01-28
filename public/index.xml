@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Start here</title>
-      <link>http://localhost:1313/test/</link>
+      <link>http://localhost:1313/start_here/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/test/</guid>
+      <guid>http://localhost:1313/start_here/</guid>
       <description>&lt;p&gt;Hej there,&lt;/p&gt;&#xA;&lt;p&gt;i assume that you have an basic python and Linux knowledge. If not i recommend that you at least work through some of resources i linked below.&lt;/p&gt;&#xA;&lt;p&gt;Brush up your Python Books:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ehmatthes.github.io/pcc_3e/&#34;&gt;Python Crash Course&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://automatetheboringstuff.com&#34;&gt;Automate the boring stuff&lt;/a&gt; (free)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Brush up your Linux Books:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://linuxcommand.org/tlcl.php&#34;&gt;The Linux Command Line&lt;/a&gt; (you can read it for free online)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://labex.io/linuxjourney&#34;&gt;Linux Journey&lt;/a&gt; (free)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
@@ -70,13 +70,6 @@
       <pubDate>Tue, 13 Jan 2026 16:18:07 +0100</pubDate>
       <guid>http://localhost:1313/subprocess/</guid>
       <description>&lt;p&gt;To run external commands like &amp;ldquo;ls&amp;rdquo; or &amp;ldquo;systemctl&amp;rdquo; use &lt;code&gt;subprocess&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;subprocess&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;subprocess&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;([&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;-lh&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;],&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;True&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;TODO&#xA;glob&#xA;mkdir&#xA;read_text()&#xA;suffix&#xA;parent&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
