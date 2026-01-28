@@ -61,7 +61,7 @@ import os def is_elevated(): if os.name == &#39;posix&#39;: return os.getuid() =
 
   <style>
   :root {
-    --width: 830px;
+    --width: 730px;
     --font-main: 'Georgia', serif;
     --font-secondary: 'Georgia', serif;
      
@@ -126,16 +126,19 @@ import os def is_elevated(): if os.name == &#39;posix&#39;: return os.getuid() =
    
 
   a {
+    font-weight: 500;
     color: var(--text-color);
-    text-decoration: none;
-    background-image: linear-gradient(#a1b577, #94bd3a);
-    background-size: 50% 1px;
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
+    text-decoration: underline #94bd3a;
+     
+     
+     
+     
   }
 
   a:hover{
     background-size: 100% 1px;
+    background-color: #93bd3a2f;
+    border-radius: 4px;
     transition: background-size 0.5s ease;
   }
 
@@ -169,7 +172,7 @@ import os def is_elevated(): if os.name == &#39;posix&#39;: return os.getuid() =
   }
 
   main {
-    line-height: 20px;
+    line-height: 1.6;
   }
 
   table {
@@ -221,13 +224,11 @@ import os def is_elevated(): if os.name == &#39;posix&#39;: return os.getuid() =
     font-size: 1.5em;
   }
 
+
   .inline {
     width: auto !important;
   }
 
-  .highlight
-	  {
-  }
   .code {
     border-radius: 3px;
     overflow-x: auto;
@@ -237,6 +238,7 @@ import os def is_elevated(): if os.name == &#39;posix&#39;: return os.getuid() =
   ul.blog-posts {
     list-style-type: none;
     padding: unset;
+
   }
 
   ul {
@@ -350,7 +352,14 @@ import os def is_elevated(): if os.name == &#39;posix&#39;: return os.getuid() =
 		
   </h1>
 </a>
+<nav>
+<a href="/test2/">Bear</a>
 
+<a href="/test/">Start here</a>
+
+<a href="https://shelltopy.bearblog.dev/blog/">blog</a>
+
+</nav>
 
 </header>
   <main>

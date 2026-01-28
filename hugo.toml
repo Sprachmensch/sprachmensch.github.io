@@ -10,6 +10,12 @@ theme = 'hugo-bearblog'
 [params]
   hideMadeWithLine = true
 
+[[menus.main]]
+  identifier = "extern"
+  name = "blog"          
+  url = "https://shelltopy.bearblog.dev/blog/"
+  weight = 40                 
+
 [markup]
   [markup.highlight]
     style = 'monokailight'
