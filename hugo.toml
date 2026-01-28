@@ -19,7 +19,7 @@ theme = 'hugo-bearblog'
 [[menus.main]]
   identifier = "home"
   name = "/ home"          
-  url = "https://www.shelltopy.com/'"
+  url = "https://www.shelltopy.com/"
   weight = 10                 
 
 
