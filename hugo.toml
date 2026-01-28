@@ -12,9 +12,16 @@ theme = 'hugo-bearblog'
 
 [[menus.main]]
   identifier = "extern"
-  name = "my blog"          
+  name = "/ my blog"          
   url = "https://shelltopy.bearblog.dev/blog/"
   weight = 40                 
+
+[[menus.main]]
+  identifier = "home"
+  name = "/ home"          
+  url = "https://www.shelltopy.com/'"
+  weight = 10                 
+
 
 [markup]
   [markup.highlight]
