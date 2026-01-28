@@ -1,6 +1,7 @@
 +++
 title = "Parse Commandline Arguments"
 date = "2026-01-15T23:01:37+01:00"
+draft = false
 +++
 
 quick'n'dirty with `argparse`

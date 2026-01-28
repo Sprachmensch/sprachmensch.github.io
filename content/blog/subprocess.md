@@ -1,7 +1,7 @@
 +++
 title = "Subprocess"
 date = "2026-01-13T16:18:07+01:00"
-tags = []
+draft= false
 +++
 
 To run external commands like "ls" or "systemctl" use `subprocess`:

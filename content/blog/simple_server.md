@@ -1,6 +1,7 @@
 +++
 title = "Simple Server"
 date = "2026-01-15T22:43:48+01:00"
+draft= false
 +++
 
 Serve a directory (filebrowser) on default port 8000

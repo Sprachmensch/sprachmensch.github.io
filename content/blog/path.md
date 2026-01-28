@@ -1,7 +1,7 @@
 +++
 title = "Path"
 date = "2026-01-13T16:18:07+01:00"
-tags = []
+draft= false
 +++
 
 In Python you can use Paths like an Object.

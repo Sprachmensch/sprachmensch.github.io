@@ -1,7 +1,7 @@
 +++
 title = "File handling"
 date = "2026-01-13T16:18:07+01:00"
-
+draft= false
 +++
 
 Read a file (Textfile):

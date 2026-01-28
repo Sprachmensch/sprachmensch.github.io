@@ -1,6 +1,7 @@
 +++
 title = "Fastapi"
 date = "2026-01-15T00:22:02+01:00"
+draft= false
 +++
 
 Flask or FastAPI? Both! For fast prototypes Flask is still a damn good tool, but for "modern" APIs FastAPI might be better.

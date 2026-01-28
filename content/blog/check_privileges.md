@@ -1,6 +1,7 @@
 +++
 title = "Check for elevated Privileges"
 date = "2026-01-15T23:01:37+01:00"
+draft= false
 +++
 
 On Linux you can use the `os` module to first check the os and the get the user id
