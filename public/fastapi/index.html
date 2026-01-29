@@ -63,13 +63,17 @@ fastapi dev FILENAME">
   <meta itemprop="wordCount" content="57">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
-  <style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+   
+<style>
   :root {
-    --width: 730px;
-    --font-main: 'Georgia', serif;
-    --font-secondary: 'Georgia', serif;
+    --width: 680px;
+    --font-main: 'Noto Serif';
+    --font-secondary: 'Noto Serif';
      
-    --font-size: 16px;
+    --font-size: 18px;
     --background-color: #fff;
     --heading-color: #474747;
     --text-color: #474747;
@@ -93,7 +97,7 @@ fastapi dev FILENAME">
   }
 
   body {
-    font-family: "Iowan","Iowan Old Style","Iowan BT",'Palatino Linotype', 'URW Palladio L', P052, serif;
+    font-family: var(--font-main);
     font-size: var(--font-scale);
     margin: auto;
     margin-top: 30px;
@@ -103,13 +107,14 @@ fastapi dev FILENAME">
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    line-height: 0em;
+     
+    line-height: 1.7;
     color: var(--text-color);
-    font: 400 1rem/1.85 var(--font-family);
+     
   }
 
   body.home-width {
-      max-width: 430px;
+      max-width: 680px;
 
   }
 
@@ -133,6 +138,10 @@ fastapi dev FILENAME">
     font-weight: 500;
     color: var(--text-color);
     text-decoration: underline #94bd3a;
+    text-decoration: none;
+    color:  #4f46e5;
+    border-bottom: 2px solid rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
      
      
      
@@ -142,6 +151,8 @@ fastapi dev FILENAME">
   a:hover{
     background-size: 100% 1px;
     background-color: #93bd3a2f;
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #312e81;
     border-radius: 4px;
     transition: background-size 0.5s ease;
   }
@@ -174,7 +185,8 @@ fastapi dev FILENAME">
   }
 
   main {
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 18px;
   }
 
   table {
@@ -188,6 +200,11 @@ fastapi dev FILENAME">
 
   img {
     max-width: 100%;
+  }
+
+  p {
+     
+    margin-bottom: 0;
   }
 
   pre code {
@@ -246,6 +263,7 @@ fastapi dev FILENAME">
 
   ul {
     padding-left: 0px;
+    margin-top: 0;
   }
   ul,ol {
     list-style: none;
@@ -356,9 +374,9 @@ fastapi dev FILENAME">
   </h1>
 </a>
 <nav>
-<a href="https://www.shelltopy.com/%27">/ home</a>
+<a href="https://www.shelltopy.com/">/ home</a>
 
-<a href="/start_here/">start here</a>
+<a href="/start_here/">/ start here</a>
 
 <a href="https://shelltopy.bearblog.dev/blog/">/ my blog</a>
 
